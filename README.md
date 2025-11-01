@@ -23,7 +23,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -40,18 +39,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun navegar(){
-        val editText = findViewById<EditText>(R.id.edtxtId)
-        val idTexto = editText.text.toString()
+        val txtNom = findViewById<EditText>(R.id.edtxtId)
+        val nom = txtNom.text.toString()
 
-        val txtEdad = findViewById<EditText>(R.id.edtxtEdad)
-        val edad = txtEdad.text.toString()
+        val numEdad = findViewById<EditText>(R.id.edtxtEdad)
+        val edad = numEdad.text.toString()
 
         val txtLocalidad = findViewById<EditText>(R.id.edtxtLocalidad)
         val localidad = txtLocalidad.text.toString()
 
 
         val intent = Intent(this, SegundaActivity::class.java).apply {
-            putExtra(MainActivity.ID, idTexto);
+            putExtra(MainActivity.ID, nom);
             putExtra(MainActivity.EDAD, edad);
             putExtra(MainActivity.LOCALIDAD, localidad);
         }
