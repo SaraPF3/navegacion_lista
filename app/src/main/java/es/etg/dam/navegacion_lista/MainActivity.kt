@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun navegar(){
-        val editText = findViewById<TextView>(R.id.edtxtId)
+        val editText = findViewById<EditText>(R.id.edtxtId)
         val idTexto = editText.text.toString()
 
-        val txtEdad = findViewById< TextView>(R.id.edtxtEdad)
+        val txtEdad = findViewById<EditText>(R.id.edtxtEdad)
         val edad = txtEdad.text.toString()
 
-        val txtLocalidad = findViewById< TextView>(R.id.edtxtLocalidad)
+        val txtLocalidad = findViewById<EditText>(R.id.edtxtLocalidad)
         val localidad = txtLocalidad.text.toString()
 
 

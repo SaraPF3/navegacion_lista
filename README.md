@@ -2,9 +2,9 @@
 
 Hecho por Sara Pérez Fernández
 
-> El link del repositorio es: 
+> El link del repositorio es: <https://github.com/SaraPF3/navegacion_lista>
 
-La primera pantalla:
+La primera pantalla tiene tres cajas en las que se puede introducir información y un botón para navegar a la segunda pantalla:
 
 ```kt
 package es.etg.dam.navegacion_lista
@@ -30,13 +30,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun navegar(){
-        val editText = findViewById<TextView>(R.id.edtxtId)
+        val editText = findViewById<EditText>(R.id.edtxtId)
         val idTexto = editText.text.toString()
 
-        val txtEdad = findViewById< TextView>(R.id.edtxtEdad)
+        val txtEdad = findViewById<EditText>(R.id.edtxtEdad)
         val edad = txtEdad.text.toString()
 
-        val txtLocalidad = findViewById< TextView>(R.id.edtxtLocalidad)
+        val txtLocalidad = findViewById<EditText>(R.id.edtxtLocalidad)
         val localidad = txtLocalidad.text.toString()
 
 
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-Su xml:
+El xml de la primera pantalla es:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -139,7 +139,7 @@ Su xml:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-La segunda pantalla:
+La segunda pantalla obtiene los datos introducidos en la primera pantalla:
 
 ```kt
 package es.etg.dam.navegacion_lista
@@ -174,7 +174,7 @@ class SegundaActivity : AppCompatActivity() {
 }
 ```
 
-Su xml:
+El xml de la segunda pantalla:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -243,7 +243,7 @@ Su xml:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-Los recursos son:
+Los valores de los elementos son:
 
 ```xml
 <resources>
