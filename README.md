@@ -4,7 +4,17 @@ Hecho por Sara Pérez Fernández
 
 > El link del repositorio es: <https://github.com/SaraPF3/navegacion_lista>
 
-La primera pantalla tiene tres cajas en las que se puede introducir información y un botón para navegar a la segunda pantalla:
+El diseño de la aplicación es el siguiente:
+
+<p align="center">
+<img src="imagenes/actividad1.png">
+</p>
+
+<p align="center">
+<img src="imagenes/actividad2.png">
+</p>
+
+La **primera** pantalla tiene tres cajas en las que se puede introducir información y un botón para navegar a la segunda pantalla:
 
 ```kt
 package es.etg.dam.navegacion_lista
@@ -55,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-El xml de la primera pantalla es:
+El xml de la **primera** pantalla es:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -99,8 +109,10 @@ El xml de la primera pantalla es:
         android:layout_width="240dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/edad"
+        android:inputType="number"
         android:textAlignment="textStart"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/edtxtId"
@@ -113,8 +125,10 @@ El xml de la primera pantalla es:
         android:layout_width="240dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/localidad"
+        android:inputType="text"
         android:textAlignment="textStart"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/edtxtEdad"
@@ -127,6 +141,7 @@ El xml de la primera pantalla es:
         android:layout_width="240dp"
         android:layout_height="60dp"
         android:layout_marginTop="56dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/usuario"
         android:inputType="text"
@@ -139,7 +154,7 @@ El xml de la primera pantalla es:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-La segunda pantalla obtiene los datos introducidos en la primera pantalla:
+La **segunda** pantalla obtiene los datos introducidos en la primera pantalla:
 
 ```kt
 package es.etg.dam.navegacion_lista
@@ -174,7 +189,7 @@ class SegundaActivity : AppCompatActivity() {
 }
 ```
 
-El xml de la segunda pantalla:
+El xml de la **segunda** pantalla es:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -191,6 +206,7 @@ El xml de la segunda pantalla:
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/localidad"
         android:inputType="text"
@@ -205,6 +221,7 @@ El xml de la segunda pantalla:
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginTop="220dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/usuario"
         android:inputType="text"
@@ -219,6 +236,7 @@ El xml de la segunda pantalla:
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/edad"
         android:inputType="number"
