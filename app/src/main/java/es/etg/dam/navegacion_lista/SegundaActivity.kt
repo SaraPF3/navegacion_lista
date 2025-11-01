@@ -1,11 +1,9 @@
 package es.etg.dam.navegacion_lista
 
 import android.os.Bundle
-import android.widget.Toast
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class SegundaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,13 +12,19 @@ class SegundaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_segunda)
 
         val extras = intent.extras
-        val id = extras!!.getString("id")
-        val edad = extras!!.getInt("edad")
-        val localidad = extras!!.getString("localidad")
+        if (extras != null) {
+            val id = extras.getString(MainActivity.ID)
+            val edad = extras.getString(MainActivity.EDAD)
+            val localidad = extras.getString(MainActivity.LOCALIDAD)
 
-        val msg = "$id $edad $localidad"
+            val txtId = findViewById<EditText>(R.id.edtxtId2)
+            val txtEdad = findViewById<EditText>(R.id.edtxtEdad2)
+            val txtLocalidad = findViewById<EditText>(R.id.edtxtLocalidad2)
 
-        val toast = Toast.makeText(this, msg, Toast.LENGTH_LONG)
-        toast.show()
+            txtId.setText(id)
+            txtEdad.setText(edad)
+            txtLocalidad.setText(localidad)
+
+        }
     }
 }

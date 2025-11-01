@@ -2,7 +2,7 @@
     <string name="app_name">navegacion_lista</string>
     <string name="txtAc1">Activity 1</string>
     <string name="txtAc2">Activity 2</string>
-    <string name="id">id</string>
+    <string name="usuario">nombre</string>
     <string name="edad">edad</string>
     <string name="localidad">localidad</string>
     <string name="btnShow">Show</string>
